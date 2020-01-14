@@ -4,3 +4,6 @@ services:
 
 before_install:
     - docker build -f Dockerfile.dev -t omidmafi/docker-react .
+
+script:
+    - docker run omidmafi/docker-react npm run test -- --coverage
